@@ -26,13 +26,13 @@
 import PackageDescription
 
 let package = Package(name: "AlamofireImage",
-                      platforms: [.iOS(.v10),
+                      platforms: [.iOS(.v12),
                                   .macOS(.v10_12),
                                   .tvOS(.v10),
                                   .watchOS(.v3)],
                       products: [.library(name: "AlamofireImage", targets: ["AlamofireImage"])],
                       dependencies: [.package(url: "https://github.com/Alamofire/Alamofire.git",
-                                              from: "5.4.0")],
+                                              .branch("xcode13"))],
                       targets: [.target(name: "AlamofireImage",
                                         dependencies: ["Alamofire"],
                                         path: "Source")],
